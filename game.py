@@ -6,7 +6,7 @@ import os
 import sys
 import random
 
-TESTSET_PCT=0.33
+TESTSET_PCT=0.33   # how much of our input will we reserve for test
 
 def append_data(ds,dir,label):
     filenames=os.listdir(dir)
@@ -37,6 +37,9 @@ data,target=zip(*dataset)
 vec=sklearn.feature_extraction.text.CountVectorizer()
 mat=vec.fit_transform(data)
 classifier=sklearn.naive_bayes.MultinomialNB().fit(mat,target)
+
+print("matrix shape" + str(mat.shape))
+print("matrix\n" + str(mat))
 
 ######## Label the test set using the classifier, and measure performance
 
