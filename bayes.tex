@@ -6,6 +6,101 @@
 \setlength{\parskip}{6pt}
 
 \frame{
+  \frametitle{What is Text Classification}
+  
+  Text classification is automatically classifying a document into two or more 
+  \emph{predefined} categories.
+  
+  Examples of documents and their possible categories:
+  Emails: spam or not spam
+  Newswire articles: business, politics or sports
+  Movie reviews: liked it or hated it
+  
+}
+  
+\frame{
+  \frametitle{Supervised learning}
+  
+  What knowledge do we need to have to complete the task?
+  
+  Classifying newswires into politics or sports:
+  (Read the newswires, find the characteristics which determine whether
+  they are politics or sports)
+  
+  But what if you've never read a politics article before?  How would you
+  know what to look for?
+  
+  \pause
+
+  In Supervised learning, the machine learns based on examples and their
+  already known classifications (training set)
+  
+  Based on the knowledge learnt from the examples, we can classify 
+  unknown examples (test set)
+}
+
+\frame{
+  \frametitle{Today's problem}  
+  
+  Lady Gaga vs. The Clash
+  
+  
+  
+  Input to this problem: a bunch of text files containing song lyrics.
+  
+}
+
+\frame{
+  \frametitle{Preprocessing the input}
+  
+  Decompose (tokenise) each input file into a `bag of words'.
+  
+  Bag of words: a list of words with corresponding frequency of that word
+  occurring in the document (a weighted vector of words)
+  
+  
+  \begin{tabular}{l|lllll}
+  & word_1 & word_2 & word_3 & word_4 & word_5 \\ \hline
+  doc_1 & & & & & \\
+  doc_2 & & & & & \\
+  doc_3 & & & & & \\
+
+  \end{tabular}
+  
+
+  
+}
+
+\frame{
+  \frametitle{Train the classifier}
+  
+  Multinomial Naive Bayes: a Generative learning algorithm
+  
+  Generative learning algorithms create a model based on the training data,
+  and apply that model on the test data.
+  
+  Two categories: ${gaga, clash}$
+  
+  We will build a model for each category.
+  
+  Classification task: find the \emph{most likely} category that the 
+  document belongs to.
+  
+}
+
+\frame{
+  \frametitle{Demo}
+  
+  
+}
+
+\frame{
+  \frametitle{How does it work?}
+  
+  
+}
+
+\frame{
   \frametitle{Bayes' Theorem}
 
   $$ P(A|B) = \frac{P(B|A)P(A)}{P(B)} $$
