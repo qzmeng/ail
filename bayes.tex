@@ -21,22 +21,22 @@
 \frame{
   \frametitle{Supervised learning}
   
-  What knowledge do we need to have to complete the task?
+  What knowledge do we need to complete the task?
   
   Classifying newswires into politics or sports:
-  (Read the newswires, find the characteristics which determine whether
-  they are politics or sports)
+  Read the newswires, find the characteristics which determine whether
+  they are politics or sports, then make a judgement.
   
   But what if you've never read a politics article before?  How would you
   know what to look for?
   
   \pause
 
-  In Supervised learning, the machine learns based on examples and their
-  already known classifications (training set)
+  In \emph{supervised learning}, the machine learns based on examples and their
+  {\bf already known} classifications ({\it training set})
   
   Based on the knowledge learnt from the examples, we can classify 
-  unknown examples (test set)
+  {\bf unknown} examples ({\it test set})
 }
 
 \frame{
@@ -53,22 +53,23 @@
 \frame{
   \frametitle{Preprocessing the input}
   
-  Decompose (tokenise) each input file into a `bag of words'.
+Decompose (tokenise) each input file into a `bag of words'.
   
-  Bag of words: a list of words with corresponding frequency of that word
-  occurring in the document (a weighted vector of words)
+ Bag of words: a list of words with corresponding frequency of that word
+occurring in the document (a weighted vector of words)
   
   
   \begin{tabular}{l|lllll}
-  & word_1 & word_2 & word_3 & word_4 & word_5 \\ \hline
-  doc_1 & & & & & \\
-  doc_2 & & & & & \\
-  doc_3 & & & & & \\
+  & $word_1$ & $word_2$ & $word_3$ & $word_4$ & $word_5$ \\
+ \hline
+  $doc_1$ & & & & & \\
+  $doc_2$ & & & & & \\
+  $doc_3$ & & & & & \\
 
   \end{tabular}
   
 
-  
+
 }
 
 \frame{
